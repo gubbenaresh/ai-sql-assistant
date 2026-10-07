@@ -1,13 +1,15 @@
-from langchain_ollama import ChatOllama 
+from langchain_ollama import ChatOllama
 
 
-LLM = ChatOllama(
+llm = ChatOllama(
     model="qwen3:4b",
-    temperature=0
+    temperature=0,
 )
 
-response = LLM.invoke(
+
+response = llm.invoke(
     "Explain what SQL is in one simple sentence."
 )
 
-print(response.content) 
+
+print(response.content)
